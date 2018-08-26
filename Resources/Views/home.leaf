@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h3>EasyTestAPI</h3>
+        <form method="post" action="/send">
+            <p>Username: <input type="text" name="username" /></p>
+            <p>
+            <textarea name="content" rows="10" cols="40" placeholder="Write your message here"></textarea>
+            </p>
+            <p><input type="submit" /></p>
+        </form>
+        
+        <h2>Messages from others…</h2>
+        
+        #for(message in messages) {
+        <form method="delete" action="/deleteInFormView/#(message.id)">
+        <p>At #date(message.date, "HH:mm"), #(message.username) wrote: "#(message.content)".
+        <input type="submit" value="Delete"/>
+        </p>
+        </form>
+        }
+    </body>
+</html>
