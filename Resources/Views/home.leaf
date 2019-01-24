@@ -1,7 +1,7 @@
 <html>
     <body>
         <h3>EasyTestAPI</h3>
-        <form method="post" action="/send">
+        <form method="post" action="/sendInFormView">
             <p>Username: <input type="text" name="username" /></p>
             <p>
             <textarea name="content" rows="10" cols="40" placeholder="Write your message here"></textarea>
