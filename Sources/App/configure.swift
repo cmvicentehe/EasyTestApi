@@ -20,8 +20,6 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     
     try services.register(LeafProvider())
     config.prefer(LeafRenderer.self, for: ViewRenderer.self)
-    
-    try services.register(FluentSQLiteProvider())
 
     // Configure a SQLite database
     let sqlite = try SQLiteDatabase(storage: .memory)

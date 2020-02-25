@@ -12,7 +12,7 @@
         <h2>Messages from others…</h2>
         
         #for(message in messages) {
-        <form method="delete" action="/deleteInFormView/#(message.id)">
+        <form method="post" action="/deleteInFormView/#(message.id)">
         <p>At #date(message.date, "HH:mm"), #(message.username) wrote: "#(message.content)".
         <input type="submit" value="Delete"/>
         </p>
